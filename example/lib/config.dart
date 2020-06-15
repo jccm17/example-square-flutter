@@ -14,6 +14,6 @@
  limitations under the License.
 */
 
-const String squareApplicationId = "REPLACE_ME";
-const String squareLocationId = "REPLACE_ME";
-const String applePayMerchantId = "REPLACE_ME";
+const String squareApplicationId = "sandbox-sq0idb-xFNeOB7dUpDLD0RhMeYRZA";
+const String squareLocationId = "FDE6N0Y51YTT6";
+const String applePayMerchantId = "X73WNM9GZ9F2C";
