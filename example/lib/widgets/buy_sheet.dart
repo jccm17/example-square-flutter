@@ -105,7 +105,7 @@ class BuySheetState extends State<BuySheet> {
       print(
           'curl --request POST $hostUrl/v2/payments \\'
           '--header \"Content-Type: application/json\" \\'
-          '--header \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \\'
+          '--header \"Authorization: Bearer EAAAEE_lezB08foxlW7UjbmzoMsND5biDDCUOtjv9WCLJTSNG4PdIgIZB9MCLFuL\" \\'
           '--header \"Accept: application/json\" \\'
           '--data \'{'
           '\"idempotency_key\": \"$uuid\",'
@@ -117,7 +117,7 @@ class BuySheetState extends State<BuySheet> {
     } else {
       print('curl --request POST $hostUrl/v2/payments \\'
           '--header \"Content-Type: application/json\" \\'
-          '--header \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \\'
+          '--header \"Authorization: Bearer EAAAEE_lezB08foxlW7UjbmzoMsND5biDDCUOtjv9WCLJTSNG4PdIgIZB9MCLFuL\" \\'
           '--header \"Accept: application/json\" \\'
           '--data \'{'
           '\"idempotency_key\": \"$uuid\",'

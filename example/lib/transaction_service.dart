@@ -21,7 +21,7 @@ import 'package:http/http.dart' as http;
 
 // Replace this with the server host you create, if you have your own server running
 // e.g. https://server-host.com
-String chargeServerHost = "https://connect.squareupsandbox.com";
+String chargeServerHost = "http://192.168.0.110:52281";
 String chargeUrl = "$chargeServerHost/chargeForCookie";
 
 class ChargeException implements Exception {
@@ -42,6 +42,8 @@ Future<void> chargeCard(CardDetails result) async {
   }
 
   var responseBody = json.decode(response.body);
+  print(response.statusCode);
+  print(responseBody.toString());
   if (response.statusCode == 200) {
     return;
   } else {
@@ -52,6 +54,7 @@ Future<void> chargeCard(CardDetails result) async {
 Future<void> chargeCardAfterBuyerVerification(
     BuyerVerificationDetails result) async {
   var body = jsonEncode({"nonce": result.nonce, "token": result.token});
+  print(body);
   http.Response response;
   try {
     response = await http.post(chargeUrl, body: body, headers: {
@@ -63,6 +66,8 @@ Future<void> chargeCardAfterBuyerVerification(
   }
 
   var responseBody = json.decode(response.body);
+  print(response.statusCode);
+  print(responseBody.toString());
   if (response.statusCode == 200) {
     return;
   } else {
